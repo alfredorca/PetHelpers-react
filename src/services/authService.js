@@ -1,5 +1,6 @@
 import axios from 'axios';
-const apiUrl = process.env.REACT_APP_API_URL
+const corsProxy = "https://cors-anywhere.herokuapp.com/"
+const apiUrl = corsProxy + process.env.REACT_APP_API_URL
 
 export const loginUserToApi = async (user) => {
   const response = await axios.post(`${apiUrl}/auth/login`, user);

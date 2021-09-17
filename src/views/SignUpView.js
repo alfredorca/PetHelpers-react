@@ -24,6 +24,10 @@ const SignUpView = () => {
       [event.target.name]: event.target.value,
     });
   }
+  
+  function isCustomer(event) {
+
+  }
 
   async function handleSubmit(event) {
     event.preventDefault();
