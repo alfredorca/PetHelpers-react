@@ -9,7 +9,6 @@ const SignUpView = () => {
     name: "",
     email: "",
     password: "",
-    role: "",
   });
 
   const history = useHistory();
@@ -36,7 +35,6 @@ const SignUpView = () => {
       name: "",
       email: "",
       password: "",
-      role: "",
     });
     history.push("/");
     window.location.reload();
@@ -86,14 +84,7 @@ const SignUpView = () => {
                     <option>Select a role</option>
                     <option value={newuser.role = 'CUSTOMER'}> Customer</option>
                     <option value={newuser.role = 'PROVIDER'}> Provider</option>
-                  </select> */}
-          <div>
-            <input type="checkbox" name="role" checked />
-            <label value={newuser.role = 'CUSTOMER'}>Customer</label>
-            <input type="checkbox" name="role" />
-            <label value={newuser.role = 'PROVIDER'}>Provider</label>
-            
-          </div>
+                  </select> */}  
           <Button
             size="lg"
             type="submit"
