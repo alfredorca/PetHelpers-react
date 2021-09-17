@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import {BrowserRouter, Switch, Route} from 'react-router-dom' 
 import './App.css';
+import NavBar2 from './components/NavBar2';
+import ContactUsView from './views/ContactUsView';
+import CustomerPortalView from './views/CustomerPortalView';
+
+//View Component Imports
+import LandingView from './views/LandingView';
+import LoginView from './views/LoginView';
+import SignUpView from './views/SignUpView';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <NavBar2/>
+      {/* <NavBar/> */}
+      <Switch>
+        <Route exact path="/" component = {LandingView}/>
+        <Route exact path="/login" component = {LoginView}/>
+        {/* <Route exact path= "/contactus" component = {ContactUsView}/> */}
+        <Route exact path= "/signup" component = {SignUpView}/>
+        <Route exact path= "/customerportal" component = {CustomerPortalView}/>
+      </Switch>
+    </BrowserRouter>
   );
 }
 

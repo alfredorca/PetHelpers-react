@@ -1,0 +1,42 @@
+/* .navbar {
+  background-image: linear-gradient(90deg, rgb(136, 188, 236), rgb(96, 96, 226));
+} */
+
+.navBarItem {
+  color: white;
+  text-decoration: none;
+  margin-right: 1vw;
+  margin-top: 10px;
+  font-size: 2.5vh;
+}
+
+.navImage{
+  margin-left: 2vw;
+}
+
+.navBrandItem {
+  color: white;
+  text-decoration: none;
+  margin-right: 3vw;
+  margin-left: 1vw;
+  font-size: 3.5vh;
+}
+
+.navBarDropDown {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.dropdown-toggle::after{
+  color: white
+}
+
+#dropdown{
+  padding:  0.6rem 0.1rem;
+  font-size: 2.5vh;
+}
+
+.navLinks {
+  margin-right: 4vw;
+}

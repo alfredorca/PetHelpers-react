@@ -1,0 +1,17 @@
+.main {
+  background-image: url('../images/loginbackground.jpg');
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+}
+
+.Login {
+  width: 60vw;
+  margin: 0 auto;
+  border: 1px solid lightslategray;
+  padding: 10vh 16vw;
+  background-color: #649164;
+}
+
+.loginButton {
+  margin-top: 5vh;
+}

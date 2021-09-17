@@ -1,0 +1,58 @@
+.CustomerPortalViewMain {
+  background-image: url('../images//Dogs-faces-zoom-background.png');
+  height: 100vh;
+}
+
+.customerContainer {
+  padding-top: 10vh;
+  
+}
+
+.customerSection {
+  margin-top: 10vh;
+  background-color: beige;
+  height: 70vh;
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+}
+
+.contentContainer {
+  width: 70vw;
+}
+
+.contentContainer h2 {
+  text-align: center;
+  font-size: 10vh;
+}
+
+.NoPetYet {
+  padding-top: 8vh;
+  align-content: center;
+  text-align: center;
+}
+
+.customerList {
+  background-color: rgb(212, 212, 187);
+  padding-right: 2vw;
+  height: 70vh;
+  width: 10vw;
+  padding-top: 25vh;
+}
+
+.customerList li {
+  list-style: none;
+  padding-top: 1vh;
+}
+
+.customerLink {
+  text-decoration: none;
+  color: black;
+}
+
+.addPetForm {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 10vh;
+}
