@@ -7,6 +7,9 @@ import CustomerPortalView from './views/CustomerPortalView';
 //View Component Imports
 import LandingView from './views/LandingView';
 import LoginView from './views/LoginView';
+import ProviderHelpView from './views/ProviderHelpView';
+import ProviderPortalView from './views/ProviderPortalView';
+import SchedulePet from './views/SchedulePet';
 import SignUpView from './views/SignUpView';
 
 function App() {
@@ -20,6 +23,10 @@ function App() {
         {/* <Route exact path= "/contactus" component = {ContactUsView}/> */}
         <Route exact path= "/signup" component = {SignUpView}/>
         <Route exact path= "/customerportal" component = {CustomerPortalView}/>
+        <Route exact path= "/customerportal/:id" component = {CustomerPortalView}/>
+        <Route exact path= "/providerportal" component = {ProviderPortalView}/>
+        <Route exact path= "/providerhelp" component = {ProviderHelpView}/>
+        <Route exact path= "/schedulepet" component = {SchedulePet}/>
       </Switch>
     </BrowserRouter>
   );

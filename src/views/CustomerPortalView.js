@@ -7,18 +7,25 @@ import { getSpeciesFromApi } from "../services/speciesService";
 import { useHistory } from "react-router";
 import { getUserFromApi } from "../services/userService";
 import PetCard from "../components/PetCard";
+import { isAuthenticated } from "../services/authService";
 
 const CustomerPortalView = () => {
+  let {user: {_id}} = isAuthenticated();
   const [pet, setPet] = useState({
     name: "",
-    species: "",
+    type: "",
   });
   const [species, setSpecies] = useState([]);
   const [userPets, setUserPets] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [noPetView, setNoPetView] = useState(true);
-
+  
   const history = useHistory();
+  
+  useEffect(() => {
+    getPets();
+    console.log(_id);
+  }, []);
 
   const hasPets = () => {
     let token = localStorage.getItem("jwtpethelpers");
@@ -27,12 +34,28 @@ const CustomerPortalView = () => {
     return true;
   };
 
-  const getPets = () => {
-    let token = localStorage.getItem("jwtpethelpers");
-    const tokenObject = JSON.parse(token);
-    let userID = tokenObject._id;
-    let user = getUserFromApi(userID) 
-    setUserPets(user.pets);
+  // const getProducts = async () => {
+  //   try {
+  //     const response = await getProductsFromApi();
+  //     setProducts(response.data);
+  //   } catch (error) {
+  //     console.log("Server not working")
+  //   }
+  // }
+
+  const getPets = async () => {
+    try {
+      let token = localStorage.getItem("jwtpethelpers");
+      const tokenObject = await JSON.parse(token);
+      let userID = tokenObject._id;
+      let user =  (await getUserFromApi(_id)).data
+      // console.log(user.pets)
+      // console.log('hello')
+       setUserPets(user.pets);
+    } catch (error) {
+      console.log('hello world')
+      console.log("not working dude");
+    }
   };
 
   function handleChange(event) {
@@ -42,9 +65,6 @@ const CustomerPortalView = () => {
     });
   }
 
-  useEffect(() => {
-    getPets();
-  }, []);
 
   // const getSpecies = async () => {
   //   const response = await getSpeciesFromApi();
@@ -105,8 +125,8 @@ const CustomerPortalView = () => {
                   <div className="row">
                     {userPets &&
                       userPets.map((userPet) => (
-                        <div className="col">
-                          <PetCard props={userPet} />
+                        <div key={userPet} className="col">
+                          <PetCard props={userPet}/>
                         </div>
                       ))}
                   </div>

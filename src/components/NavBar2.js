@@ -41,9 +41,9 @@ const NavBar2 = () => {
               <Link to="/customerportal">Customer Portal</Link>
             )}
             { isAuthenticated() && isAuthenticated().user.role === 'PROVIDER' && (
-              <Link to="/">Provider Portal</Link>
+              <Link to="/providerportal">Provider Portal</Link>
             )}
-            <Link to="/">Providers</Link>
+            {/* <Link to="/">Providers</Link> */}
             {/* <Link to="/">Orders</Link> */}
           </Nav>
 

@@ -41,7 +41,7 @@ const LoginView = () => {
   return (
     <section className="main">
       <div className="Login">
-        <Form onSubmit={handleSubmit}>
+        <Form >
           <Form.Group size="lg" controlId="email">
             <Form.Label>Email</Form.Label>
             <Form.Control
@@ -63,6 +63,7 @@ const LoginView = () => {
             />
           </Form.Group>
           <Button
+          onClick={handleSubmit}
             size="lg"
             type="submit"
             disabled={!validateForm()}

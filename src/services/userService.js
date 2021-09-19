@@ -6,6 +6,11 @@ export const getUserFromApi = async (id) => {
   return response;
 };
 
+export const getUserPetsFromApi = async (id) => {
+  const response = await axios.get(`${apiUrl}/users/user/${id}`);
+  return response.data;
+};
+
 export const postPetToApi = async (pet) => {
   const response = await axios.post(`${apiUrl}/pets/pet`, pet);
   return response;

@@ -38,12 +38,14 @@
   height: 70vh;
   width: 10vw;
   padding-top: 25vh;
+  padding-right: 15vw;
 }
 
 .customerList li {
   list-style: none;
   padding-top: 1vh;
 }
+
 
 .customerLink {
   text-decoration: none;
@@ -55,4 +57,10 @@
   text-align: center;
   margin: 0 auto;
   padding-top: 10vh;
+}
+
+
+.sidebarlink {
+  color:#127983;
+  text-decoration: none;
 }
