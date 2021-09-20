@@ -1,13 +1,12 @@
 import { Button, Card } from "react-bootstrap";
 
-const PetCard = ({ props: {name, type}}) => {
+const ProviderPetCard = ({ props: {name, type}}) => {
   let imgPlaceHolder =
     "https://mylostpetalert.com/wp-content/themes/mlpa-child/images/nophoto.gif";
-
-    const handleAlert = () => {
-      alert('This pet will now be showed to all Providers as a possible customer')
+  
+    const handleAlarm = () => {
+      alert('You have sent a request to take care of this pet!')
     }
-
 
   return (
     <>
@@ -22,7 +21,7 @@ const PetCard = ({ props: {name, type}}) => {
           <Card.Text>
             Species: {type.name}
           </Card.Text>
-          <Button onClick={handleAlert}>Request service</Button>
+          <Button onClick={handleAlarm}>Offer service</Button>
           {/* <Link className="btn btn-outline-primary" to={`/product/${_id}`}>View</Link> */}
         </Card.Body>
       </Card>
@@ -30,4 +29,4 @@ const PetCard = ({ props: {name, type}}) => {
   );
 };
 
-export default PetCard;
+export default ProviderPetCard;

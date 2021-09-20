@@ -31,38 +31,47 @@ const NavBar2 = () => {
       <Navbar.Brand href="/" className="NavBrand">
         <img src={logo} alt="" width="50" height="50" />{" "}
       </Navbar.Brand>
-      <Navbar.Brand href='/'><span className="NavLogo">Pet Helpers</span></Navbar.Brand>
+      <Navbar.Brand href="/">
+        <span className="NavLogo">Pet Helpers</span>
+      </Navbar.Brand>
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Link to="/">Home</Link>
-            { isAuthenticated() && isAuthenticated().user.role === 'USER' && (
-              <Link to="/customerportal">Customer Portal</Link>
+            {isAuthenticated() && isAuthenticated().user.role === "USER" && (
+              <>
+                <Link to="/info">Your Info</Link>
+                <Link to="/customerportal">Customer Portal</Link>
+              </>
             )}
-            { isAuthenticated() && isAuthenticated().user.role === 'PROVIDER' && (
-              <Link to="/providerportal">Provider Portal</Link>
-            )}
+            {isAuthenticated() &&
+              isAuthenticated().user.role === "PROVIDER" && (
+                <>
+                <Link to="/info">Your Info</Link>
+                <Link to="/providerportal">Provider Portal</Link>
+                </>
+              )}
             {/* <Link to="/">Providers</Link> */}
             {/* <Link to="/">Orders</Link> */}
           </Nav>
 
           <Nav>
             {!isAuthenticated() ? (
-            <>
-              <Link className="btn btn-success" to="/login">
-                Login
-              </Link>
-              <Link className="btn btn-success" to="/signup">
-                Sign Up
-              </Link>
-            </>
+              <>
+                <Link className="btn btn-success" to="/login">
+                  Login
+                </Link>
+                <Link className="btn btn-success" to="/signup">
+                  Sign Up
+                </Link>
+              </>
             ) : (
-            <>
-              <button onClick={handleLogOut} className="btn btn-outline-dark">
-              Sign Out
-              </button>
-            </>
+              <>
+                <button onClick={handleLogOut} className="btn btn-outline-dark">
+                  Sign Out
+                </button>
+              </>
             )}
           </Nav>
         </Navbar.Collapse>

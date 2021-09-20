@@ -1,16 +1,16 @@
-.CustomerPortalViewMain {
+.CustomerInfoPortalViewMain {
   background-image: url('../images//Dogs-faces-zoom-background.png');
   min-height: 100vh;
   height: fit-content;
   padding-bottom: 10vh;
 }
 
-.customerContainer {
+.customerInfoContainer {
   padding-top: 10vh;
   
 }
 
-.customerSection {
+.customerInfoSection {
   margin-top: 10vh;
   background-color: beige;
   height: fit-content;
@@ -34,21 +34,22 @@
   text-align: center;
 }
 
-.customerList {
+.customerInfoList {
   background-color: rgb(212, 212, 187);
   width: 10vw;
-  padding-top: 35vh;
+  padding-top: 15%;
   padding-right: 15vw;
+  padding-bottom:25vh
 }
 
-.customerList li {
+.customerInfoList li {
   list-style: none;
   padding-top: 1vh;
   width: 10vw;
 }
 
 
-.customerLink {
+.customerInfoLink {
   text-decoration: none;
   color: black;
 }

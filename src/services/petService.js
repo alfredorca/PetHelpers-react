@@ -2,7 +2,12 @@ import axios from 'axios';
 const apiUrl = process.env.REACT_APP_API_URL
 
 export const getPetsFromApi =  async (id) => {
-  const response = await axios.get(`${apiUrl}/users/user/${id}`);
+  const response = await axios.get(`${apiUrl}/pets/pet/${id}`);
+  return response;
+}
+
+export const getAllPetsFromApi = async () => {
+  const response = await axios.get(`${apiUrl}/pets`)
   return response;
 }
 
